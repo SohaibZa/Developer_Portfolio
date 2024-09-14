@@ -1,0 +1,99 @@
+.contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(39, 38, 37);
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+.contact textarea{
+    height: 100%;
+    resize: none;
+    color: #000;
+    border-radius: 15px;
+    outline:none;
+    padding: 10px;
+}
+.contact form input{
+    border-radius: 30px;
+    padding: 10px;
+    color: #000;
+    font-size: 20px;
+    outline: none;
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+footer{
+    height: 15vh;
+    background-color:rgb(39, 38, 37);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    font-size: 15px;
+    border-top: 1px solid #fff;
+}
+footer div{
+    color: #fff;
+}
+footer div a{
+    color: rgb(220, 5, 202);
+}
+footer div a:hover{
+    color: rgb(220, 5, 202);
+    text-decoration: dotted;
+}
+
+footer div i{
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 18px;
+    color:rgb(220, 5, 202);
+}
+footer .f-item:nth-child(1) a{
+    color: rgb(203, 3, 203);
+    font-size: 18px;
+}
+footer .f-item:nth-child(2){
+    text-align: center;
+}
+footer .f-item:nth-child(3){
+    font-size: 15px;
+}
+.fa-linkedin:hover{
+    color: rgb(55, 55, 255);
+}
+.fa-facebook:hover{
+    color: blue;
+}
+.fa-github:hover{
+    color: rgb(80, 80, 83);
+}
+.fa-instagram:hover{
+    color: pink;
+}
+@media screen and (max-width:1025px){
+    footer{
+        display: block;
+        padding-left: 20px;
+        padding-bottom: 12px;
+    }
+    .contact{
+        padding: 20px 0;
+    }
+    .contact-form form{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    .contact form input{
+        padding: 5px;
+        font-size: 15px;
+    }
+}

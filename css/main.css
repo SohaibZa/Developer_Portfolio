@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Playwrite+CU:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Defining the color variables because I am going to use these to change themes of the website */
+:root {
+    --main-color: linear-gradient(rgb(124, 2, 151), rgb(141, 19, 3), rgb(3, 123, 128));
+}
+body{
+    background-color: #242323;
+}
+/* Desiging the Navbar and Navbar menu*/
+
+#nav-Landing {
+    /* background-image:  linear-gradient(180deg, rgb(255, 0, 0),rgb(255, 234, 0)); */
+    background-image: url(../images/bg-landing.jpg);
+    background-size: cover;
+}
+
+.Navbar {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.logo-text {
+    font-family: "Roboto Slab";
+    font-size: 40;
+    font-weight: bold;
+    color: rgb(195, 9, 195);
+    cursor: pointer;
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#menu {
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.menu-list {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+}
+.showList {
+    display: block;
+}
+
+.list-item {
+    font-family: 'Roboto';
+    margin-right: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.list-item:hover {
+    color: rgb(195, 9, 195);
+}
+
+.list-item:focus {
+    color: rgb(179, 247, 69);
+}
+
+#btn{
+    padding: 1px 5px;
+    font-size: 10px;
+    width: 5%;
+    color: #fff;
+    display: none;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.myBtn {
+    margin: 0 10px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: none;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+.myBtn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.myBtn:hover {
+    border: 1px solid #fff;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+pre {
+    width: 50%;
+}
+
+.Landing {
+    height: 90vh;
+    width: 100%;
+    align-items: center;
+}
+
+#define {
+    color: #fff;
+    font-size: 4rem;
+    /* text-shadow: 5px 5px 20px rgb(255, 0, 0); */
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px solid #000000;
+    animation: writeDefine 2s steps(29), cursor .3s step-end 15 alternate;
+}
+
+#define-detail {
+    margin-top: 3px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    animation: fadein 2s ease;
+    color: #fff;
+}
+
+#skill-text {
+    color: rgb(195, 9, 195);
+}
+
+/* Desiging the About Section */
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(36, 35, 35);
+    color: #fff;
+    padding: 30px 0;
+}
+
+.about-text {
+    width: 50%;
+    font-size: 25px;
+    
+}
+
+.about-text h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'sans-serif';
+    font-size: 3em;
+    background-image: linear-gradient(50deg, rgb(255, 0, 0), rgb(255, 234, 0), rgb(238, 9, 200), rgb(11, 96, 14));
+    background-clip: text;
+    color: transparent;
+}
+
+.about-text p {
+    font-family: 'PT Sans';
+    font-size: 1.5m;
+    animation: slideInLeft  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;;
+}
+p .fancy{
+    font-size: 2em;
+    color: rgb(195, 9, 195);
+    font-weight: bold;
+}
+
+.about-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadein  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;;
+   
+}
+
+.about-img:hover {
+    width: 260px;
+    height: 260px;
+}
+
+.about-img img {
+    display: inline;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Making all the animatons */
+@keyframes writeDefine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0.3;
+        scale: 0.8;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes slideInLeft{
+    from{
+        transform: translateX(-50px);
+        opacity: 0.1;
+    }
+    to{transform: translateX(0px);
+    opacity: 1;
+    }
+}
+@keyframes fadeinList {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Making the page Responsive */
+@media screen and (max-width:1025px) {
+    .Navbar {
+        margin: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .logo-text {
+        text-align: center;
+    }
+
+    #define {
+        font-size: 2.5rem;
+    }
+
+    .menu {
+        display: none;
+        font-size: 25px;
+        flex-direction: column;
+    }
+
+    .menu-list {
+        flex-direction: column;
+    }
+
+    #btn {
+        display: block;
+    }
+    .list-item {
+        margin: 10px 20px;
+    }
+
+    #define-detail {
+        font-size: 1rem;
+    }
+
+    .about{
+        padding: 0;
+    }
+
+    .about-img {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width:640px) {
+    #define {
+        font-size: 1.5rem;
+    }
+   
+    .menu-list {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .Navbar {
+        padding: 10px 5px;
+        margin: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .Landing {
+        align-items: flex-start;
+        margin-top: 50px;
+        height: 40vh;
+    }
+
+
+    #define-detail {
+        font-size: 0.6rem;
+    }
+   
+    .about-img {
+        display: none;
+    }
+
+    .about-text h1 {
+        font-size: 1.5em;
+    }
+
+    .about-text p {
+        font-size: 0.7em;
+    }
+
+    
+}

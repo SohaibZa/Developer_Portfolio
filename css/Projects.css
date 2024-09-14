@@ -1,0 +1,70 @@
+.projects{
+    background-color: rgb(62 59 60);
+    font-size: 50px;
+    padding:0 12px 30px 12px;
+}
+.projects h1{
+    font-size: 0.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgb(62 59 60);
+    color: #fff;
+}
+.project-container{
+    font-size: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+.project-container .project-item{
+    position: relative;
+    height: 300px;
+    width: 200px;
+    color: white;
+    background-image: rgb(35,35,35);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+}
+.project-container .project-item::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+   transform:translate(-50%, -50%);
+    background:radial-gradient(var(--clr),transparent,transparent);
+    height: 700px;
+    width: 700px;
+    opacity: 0;
+    transition:0.1s, top 0s, left 0s;
+}
+.project-container .project-item:hover::before{
+    opacity: 1;
+}
+.project-container .project-item h3{
+    text-align: center;
+}
+.project-container .project-item::after{
+    content: 'Project';
+    text-align: center;
+    position: absolute;
+    inset: 5px;
+    color: yellow;
+    background:rgb(35,35,35);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 20px;
+    z-index: 1;
+}
+@media screen and (max-width:1025px){
+    .project-container .project-item{
+        height: 150px;
+        width: 100px;
+    }
+    .project-container .project-item::after{
+        font-size: 10px;
+    }
+}
