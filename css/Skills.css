@@ -66,18 +66,20 @@
     padding: 8px 0;
 }
 @media screen and (max-width:1040px) {
+    .stack{
+        height: 30vh;
+    }
     .stack .stack-container{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 50px;
-       
+        gap: 20px;
        }
        .stack-container .stack-item{
            height: 60px;
            width: 60px;
        }
        .p-skill{
-        font-size: 40px;
+        font-size: 28px;
        }
 }

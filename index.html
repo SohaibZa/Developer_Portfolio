@@ -20,6 +20,7 @@
   <!-- Stylesheet for desiging the contact and footer -->
   <link rel="stylesheet" href="./css/contact_footer.css">
   <link href="./src/output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -84,13 +85,13 @@
   <h1 class="p-skill" id="skills">Stack</h1>
   <div class="stack">
     <div class="stack-container">
-      <div class="stack-item" style="--colr:yellow" ><img src="./images/skillsPngs/Js.png"></div>
-      <div class="stack-item" style="--colr:lightblue" ><img src="./images/skillsPngs/react Js.png"></div>
-      <div class="stack-item" style="--colr:lime" ><img src="./images/skillsPngs/nodeJs.png"></div>
-      <div class="stack-item" style="--colr:gray" ><img src="./images/skillsPngs/express.png"></div>
-      <div class="stack-item" style="--colr:green" ><img src="./images/skillsPngs/mongoDB.png"></div>
-      <div class="stack-item" style="--colr:red" ><img src="./images/skillsPngs/git.png"></div>
-      <div class="stack-item" style="--colr:purple" ><img src="./images/skillsPngs/figma.png"></div>
+      <div class="stack-item" style="--colr:yellow" ><img alt="Javascript" src="./images/skillsPngs/Js.png"></div>
+      <div class="stack-item" style="--colr:lightblue" ><img alt="React js" src="./images/skillsPngs/react Js.png"></div>
+      <div class="stack-item" style="--colr:lime" ><img alt="Node js" src="./images/skillsPngs/nodeJs.png"></div>
+      <div class="stack-item" style="--colr:gray" ><img alt="Express js" src="./images/skillsPngs/express.png"></div>
+      <div class="stack-item" style="--colr:green" ><img alt="MongoDB" src="./images/skillsPngs/mongoDB.png"></div>
+      <div class="stack-item" style="--colr:red" ><img alt="Git" src="./images/skillsPngs/git.png"></div>
+      <div class="stack-item" style="--colr:purple" ><img alt="Figma" src="./images/skillsPngs/figma.png"></div>
     </div>
 
   </div>
@@ -137,13 +138,14 @@
   <div class="contact">
     <h1>Lets Talk!</h1>
     <div class="contact-form">
-      <form action="#">
+      <form action="./message.html">
         <label for="name">Your Name</label>
-        <input id="name" type="text">
+        <input id="name" type="text" required>
         <label for="email">Your eMail</label>
-        <input id="email" type="email">
+        <input id="email" type="email" required>
         <label for="message">Your Message</label>
-        <textarea name="message" id="message" cols="12" rows="4"></textarea>
+        <textarea name="message" required minlength="10" id="message" cols="12" rows="4"></textarea>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   </div>

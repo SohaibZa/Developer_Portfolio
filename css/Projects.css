@@ -67,4 +67,8 @@
     .project-container .project-item::after{
         font-size: 10px;
     }
+    .projects h1{
+        font-size: 28px;
+        padding-top: 10px;
+    }
 }

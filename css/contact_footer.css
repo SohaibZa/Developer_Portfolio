@@ -23,12 +23,22 @@
     font-size: 20px;
     outline: none;
 }
-
+.contact form button{
+    margin-top: 10px;
+    background-color: rgb(227, 171, 40);
+    border-radius: 20px;
+    padding: 8px 0;
+    transition: all 0.2s ease;
+}
+.contact form button:hover{
+    background-color: rgb(147, 111, 27) ;
+}
 .contact-form form{
     display: flex;
     flex-direction: column;
     width: 500px;
 }
+/* Designing the footer */
 footer{
     height: 15vh;
     background-color:rgb(39, 38, 37);
@@ -41,6 +51,7 @@ footer{
 }
 footer div{
     color: #fff;
+    justify-self: center;
 }
 footer div a{
     color: rgb(220, 5, 202);
@@ -81,8 +92,11 @@ footer .f-item:nth-child(3){
 @media screen and (max-width:1025px){
     footer{
         display: block;
-        padding-left: 20px;
+        /* padding-left: 20px; */
         padding-bottom: 12px;
+    }
+    footer .f-item:nth-child(2){
+        text-align: start;
     }
     .contact{
         padding: 20px 0;
